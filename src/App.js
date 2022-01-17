@@ -1,4 +1,5 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
 import Hero from "./Hero";
 
@@ -8,6 +9,7 @@ class App extends React.Component {
       <div>
         <Navbar />
         <Hero />
+        <Outlet />
       </div>
     );
   }
