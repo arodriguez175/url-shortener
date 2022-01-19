@@ -7,8 +7,8 @@ class Hero extends React.Component {
       <div>
         <h1>More than just shorter links</h1>
         <h2>
-          Build your brand's recognition and get <br />
-          detailed insights on how your links are performing.
+          Build your brand's recognition and get detailed
+          <br /> insights on how your links are performing.
         </h2>
         <button>Get Started</button>
       </div>
