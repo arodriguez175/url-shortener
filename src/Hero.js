@@ -10,6 +10,7 @@ class Hero extends React.Component {
           Build your brand's recognition and get <br />
           detailed insights on how your links are performing.
         </h2>
+        <button>Get Started</button>
       </div>
     );
   }
