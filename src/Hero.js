@@ -5,7 +5,9 @@ class Hero extends React.Component {
   render() {
     return (
       <div>
-        <h1>More than just shorter links</h1>
+        <h1>
+          More than just <br /> shorter links
+        </h1>
         <h2>
           Build your brand's recognition and get detailed
           <br /> insights on how your links are performing.

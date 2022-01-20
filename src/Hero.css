@@ -4,6 +4,15 @@ h2 {
   margin-right: 140px;
 }
 
+h1 {
+  margin-bottom: 0;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
 button {
   background-color: hsl(180, 66%, 49%);
   padding-top: 15px;
