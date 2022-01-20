@@ -5,12 +5,17 @@ h2 {
 }
 
 h1 {
+  color: #363636;
   margin-bottom: 0;
+  font-weight: 700;
+  font-size: 70px;
 }
 
 h2 {
   margin-top: 0;
   margin-bottom: 40px;
+  color: #b2b1b3;
+  font-weight: lighter;
 }
 
 button {

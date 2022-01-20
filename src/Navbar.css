@@ -1,6 +1,6 @@
 .navbar {
   margin-top: 40px;
-  margin-bottom: 130px;
+  margin-bottom: 120px;
 }
 
 .navbar li {
@@ -16,7 +16,6 @@
 #logo {
   margin-left: 100px;
   margin-right: 40px;
-  /*font-weight: 500px; Didn't work*/
   font-size: 30px;
 }
 
