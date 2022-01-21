@@ -17,6 +17,7 @@ h2 {
   margin-bottom: 40px;
   color: #b2b1b3;
   font-weight: lighter;
+  font-size: 20px;
 }
 
 button {
@@ -30,4 +31,14 @@ button {
   color: #fff;
   margin-left: 140px;
   font-size: 18px;
+}
+
+.image-container {
+  overflow: hidden;
+}
+
+img {
+  position: absolute;
+  right: 0;
+  top: 137px;
 }
