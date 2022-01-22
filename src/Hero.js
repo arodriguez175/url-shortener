@@ -15,7 +15,11 @@ class Hero extends React.Component {
         </h2>
         <button>Get Started</button>
         <div className="hero-image-container">
-          <img id="hero-image" src={heroImage} />
+          <img
+            id="hero-image"
+            src={heroImage}
+            alt="Illustration of person sitting in front of desk"
+          />
         </div>
       </div>
     );
