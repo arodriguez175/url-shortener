@@ -20,7 +20,8 @@ h2 {
   font-size: 20px;
 }
 
-button {
+.get-started-button {
+  text-decoration: none;
   background-color: hsl(180, 66%, 49%);
   padding-top: 15px;
   padding-bottom: 15px;
