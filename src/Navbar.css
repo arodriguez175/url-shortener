@@ -15,13 +15,11 @@
 
 #logo {
   margin-left: 100px;
-  margin-right: 40px;
-  font-size: 30px;
+  margin-right: 147px;
 }
 
-#logo a {
-  color: #363636;
-  font-weight: bolder;
+#logo img {
+  position: absolute;
 }
 
 #login {

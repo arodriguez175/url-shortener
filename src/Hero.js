@@ -14,8 +14,8 @@ class Hero extends React.Component {
           <br /> insights on how your links are performing.
         </h2>
         <button>Get Started</button>
-        <div className="image-container">
-          <img src={heroImage} />
+        <div className="hero-image-container">
+          <img id="hero-image" src={heroImage} />
         </div>
       </div>
     );

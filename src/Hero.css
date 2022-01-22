@@ -33,11 +33,11 @@ button {
   font-size: 18px;
 }
 
-.image-container {
+.hero-image-container {
   overflow: hidden;
 }
 
-img {
+#hero-image {
   position: absolute;
   right: 0;
   top: 137px;

@@ -1,6 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import logo from "./images/logo.svg";
 
 class Navbar extends React.Component {
   render() {
@@ -8,7 +9,9 @@ class Navbar extends React.Component {
       <div>
         <ul className="navbar">
           <li id="logo">
-            <Link to="/">Shortly</Link>
+            <Link to="/">
+              <img src={logo} />
+            </Link>
           </li>
 
           <li>
