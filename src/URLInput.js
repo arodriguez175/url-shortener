@@ -7,6 +7,7 @@ class URLInput extends React.Component {
       <div>
         <div className="input-container">
           <input placeholder="Shorten a link here..."></input>
+          <button>Shorten It!</button>
         </div>
       </div>
     );
