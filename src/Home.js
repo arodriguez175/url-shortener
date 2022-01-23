@@ -1,10 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
+import Hero from "./Hero";
+import URLInput from "./URLInput";
 
-class Home extends Component {
+class Home extends React.Component {
   render() {
     return (
       <div>
-        <h2>Home</h2>
+        <Hero />
+        <URLInput />
       </div>
     );
   }
