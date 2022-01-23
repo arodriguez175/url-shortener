@@ -32,3 +32,7 @@ button {
   background-color: hsl(180, 66%, 49%);
   color: #fff;
 }
+
+.input-container button:hover {
+  cursor: pointer;
+}
