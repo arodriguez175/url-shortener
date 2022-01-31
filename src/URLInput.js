@@ -5,16 +5,17 @@ import "./URLInput.css";
 class URLInput extends React.Component {
   constructor(props) {
     super(props);
-    this.urlInput = React.createRef();
+    this.urlInput = React.createRef(); // React.createRef() is a way for React to reference an element for later use like the input element. Has to be in a constructor method.
   }
 
   shorten() {
-    console.log(`URL: ${this.urlInput.current.value}`);
+    // Assigned the base API url + whatever is typed in the input field current value as this url variable.
     const url = `https://api.shrtco.de/v2/shorten?url=${this.urlInput.current.value}`;
     axios
       .post(url)
-      .then(function (response) {
-        console.log(response);
+      .then((response) => {
+        const data = response.data;
+        this.shortnedLink = data.result.full_short_link;
       })
       .catch(function (error) {
         console.log(error);
