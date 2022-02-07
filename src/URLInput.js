@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import "./URLInput.css";
+import URLblock from "./URLblock";
 
 class URLInput extends React.Component {
   constructor(props) {
@@ -16,6 +17,7 @@ class URLInput extends React.Component {
       .then((response) => {
         const data = response.data;
         this.shortnedLink = data.result.full_short_link;
+        this.originalUrl = this.urlInput.current.value;
       })
       .catch(function (error) {
         console.log(error);
@@ -38,6 +40,10 @@ class URLInput extends React.Component {
             Shorten It!
           </button>
         </div>
+        <URLblock
+          originalUrl={this.originalUrl}
+          shortenedUrl={this.shortnedLink}
+        />
       </div>
     );
   }
