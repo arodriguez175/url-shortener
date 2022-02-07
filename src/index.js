@@ -9,21 +9,25 @@ import Resources from "./Resources";
 import Login from "./Login";
 import SignUp from "./SignUp";
 import Layout from "./Layout";
+import store from "./store";
+import { Provider } from "react-redux";
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="features" element={<Features />} />
-          <Route path="pricing" element={<Pricing />} />
-          <Route path="resources" element={<Resources />} />
-          <Route path="login" element={<Login />} />
-          <Route path="sign-up" element={<SignUp />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="features" element={<Features />} />
+            <Route path="pricing" element={<Pricing />} />
+            <Route path="resources" element={<Resources />} />
+            <Route path="login" element={<Login />} />
+            <Route path="sign-up" element={<SignUp />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );

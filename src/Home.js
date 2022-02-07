@@ -1,13 +1,13 @@
 import React from "react";
 import Hero from "./Hero";
-import URLInput from "./URLInput";
+import URLShortener from "./features/urlShortener/URLShortener"; //
 
 class Home extends React.Component {
   render() {
     return (
       <div>
         <Hero />
-        <URLInput />
+        <URLShortener />
       </div>
     );
   }
