@@ -7,26 +7,30 @@ export const shortenerSlice = createSlice({
     shortenedUrls: [],
   },
   reducers: {
-    shorten: (state, action) => {
-      const url = `https://api.shrtco.de/v2/shorten?url=${action.payload}`;
-      axios
-        .post(url)
-        .then((response) => {
-          const data = response.data;
-          const newUrlObject = {
-            originalUrl: action.payload,
-            shortenedUrl: data.result.full_short_link,
-          };
-          state.shortenedUrls.append(newUrlObject);
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
-      console.log("hello");
+    saveShortenedUrl: (state, action) => {
+      state.shortenedUrls = [...state.shortenedUrls, action.payload];
     },
   },
 });
 
-export const { shorten } = shortenerSlice.actions;
+export function shortenUrl(originalUrl) {
+  return async (dispatch) => {
+    const url = `https://api.shrtco.de/v2/shorten?url=${originalUrl}`;
+    axios
+      .post(url)
+      .then((response) => {
+        const data = response.data;
+        dispatch(saveShortenedUrl({
+          originalUrl: originalUrl,
+          shortenedUrl: data.result.full_short_link,
+        }));
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+};
+
+export const { shorten, saveShortenedUrl } = shortenerSlice.actions;
 
 export default shortenerSlice.reducer;
