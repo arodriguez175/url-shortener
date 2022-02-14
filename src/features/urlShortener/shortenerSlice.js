@@ -20,17 +20,19 @@ export function shortenUrl(originalUrl) {
       .post(url)
       .then((response) => {
         const data = response.data;
-        dispatch(saveShortenedUrl({
-          originalUrl: originalUrl,
-          shortenedUrl: data.result.full_short_link,
-        }));
+        dispatch(
+          saveShortenedUrl({
+            originalUrl: originalUrl,
+            shortenedUrl: data.result.full_short_link,
+          })
+        );
       })
       .catch(function (error) {
         console.log(error);
       });
-  }
-};
+  };
+}
 
-export const { shorten, saveShortenedUrl } = shortenerSlice.actions;
+export const { saveShortenedUrl } = shortenerSlice.actions;
 
 export default shortenerSlice.reducer;
