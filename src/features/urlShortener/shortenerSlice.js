@@ -5,10 +5,15 @@ export const shortenerSlice = createSlice({
   name: "shortener",
   initialState: {
     shortenedUrls: [],
+    isLoading: false,
   },
   reducers: {
     saveShortenedUrl: (state, action) => {
       state.shortenedUrls = [...state.shortenedUrls, action.payload];
+    },
+    setLoading: (state, action) => {
+      console.log(action);
+      state.isLoading = action.payload;
     },
   },
 });
@@ -16,23 +21,30 @@ export const shortenerSlice = createSlice({
 export function shortenUrl(originalUrl) {
   return async (dispatch) => {
     const url = `https://api.shrtco.de/v2/shorten?url=${originalUrl}`;
+    dispatch(setLoading(true));
     axios
       .post(url)
       .then((response) => {
+        /* response: {
+          data: {...},
+          ...
+        }*/
         const data = response.data;
-        dispatch(
-          saveShortenedUrl({
-            originalUrl: originalUrl,
-            shortenedUrl: data.result.full_short_link,
-          })
-        );
+        const shortenedUrlObject = {
+          originalUrl: originalUrl,
+          shortenedUrl: data.result.full_short_link,
+        };
+        dispatch(saveShortenedUrl(shortenedUrlObject));
       })
       .catch(function (error) {
         console.log(error);
+      })
+      .finally(() => {
+        dispatch(setLoading(false));
       });
   };
 }
 
-export const { saveShortenedUrl } = shortenerSlice.actions;
+export const { saveShortenedUrl, setLoading } = shortenerSlice.actions;
 
 export default shortenerSlice.reducer;
