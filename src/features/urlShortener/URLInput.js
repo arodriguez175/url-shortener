@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { useDispatch } from "react-redux";
-import { shorten } from "./shortenerSlice";
+import { shortenUrl } from "./shortenerSlice";
 import "./URLInput.css";
 
 function URLInput() {
@@ -9,7 +9,7 @@ function URLInput() {
 
   const handleClick = () => {
     const inputValue = urlInput.current.value;
-    dispatch(shorten(inputValue));
+    dispatch(shortenUrl(inputValue));
   };
 
   return (
