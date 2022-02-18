@@ -1,0 +1,23 @@
+.urlBlock {
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 1%;
+  border-style: solid;
+}
+
+.urlBlock p {
+  margin: 0;
+}
+
+.originalUrl {
+  margin-right: 54%;
+}
+
+.copyButton {
+  width: 100px;
+  padding: 8px;
+  margin: 10px;
+  font-size: 13px;
+  border-radius: 5px;
+}

@@ -1,14 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./URLblock.css";
 
 class URLblock extends React.Component {
   render() {
     return (
-      <div>
+      <div className="urlBlock">
         <p>
           <span class="originalUrl">{this.props.originalUrl}</span>
           <span class="shortenedUrl">{this.props.shortenedUrl}</span>
-          <button>Copy</button>
+          <button className="copyButton">Copy</button>
         </p>
       </div>
     );

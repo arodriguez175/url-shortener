@@ -4,7 +4,11 @@ import { shortenUrl } from "./shortenerSlice";
 import "./URLInput.css";
 
 function URLInput() {
-  const urlInput = useRef(null); // React.createRef() is a way for React to reference an element for later use like the input element. Has to be in a constructor method.
+  /* useRef() references an element for later use 
+  like the input element. */
+  const urlInput = useRef(null);
+  /* Dispatch an action to the redux store 
+  by simply adding an action as an argument to the new variable. */
   const dispatch = useDispatch();
   const isLoading = useSelector((state) => state.shortener.isLoading);
 
