@@ -7,8 +7,8 @@ class URLblock extends React.Component {
     return (
       <div className="urlBlock">
         <p>
-          <span class="originalUrl">{this.props.originalUrl}</span>
-          <span class="shortenedUrl">{this.props.shortenedUrl}</span>
+          <p class="originalUrl">{this.props.originalUrl}</p>
+          <p class="shortenedUrl">{this.props.shortenedUrl}</p>
           <button className="copyButton">Copy</button>
         </p>
       </div>

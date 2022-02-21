@@ -2,12 +2,20 @@ import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const shortenerSlice = createSlice({
+  /* A "slice" is a collection of Redux reducer logic and actions
+  for a single feature in the app */
+
   name: "shortener",
   initialState: {
     shortenedUrls: [],
     isLoading: false,
   },
+  // The beginning state of the shortener slice
+
   reducers: {
+    /* A reducer takes the state and action of the application 
+    and returns the new state. */
+
     saveShortenedUrl: (state, action) => {
       state.shortenedUrls = [...state.shortenedUrls, action.payload];
     },
