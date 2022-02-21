@@ -3,15 +3,23 @@
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 1%;
-  border-style: solid;
+  border: 1px solid;
 }
 
 .urlBlock p {
   margin: 0;
+  text-overflow: ellipsis;
 }
 
 .originalUrl {
   margin-right: 54%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.shortenedUrl {
+  color: hsl(180, 66%, 49%);
 }
 
 .copyButton {
