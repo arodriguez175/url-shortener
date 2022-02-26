@@ -3,6 +3,7 @@ import Hero from "./Hero";
 import URLShortener from "./features/urlShortener/URLShortener"; //
 import "./Home.css";
 import AdvancedStatistics from "./AdvancedStatistics";
+import Boost from "./Boost";
 
 class Home extends React.Component {
   render() {
@@ -11,6 +12,7 @@ class Home extends React.Component {
         <Hero />
         <URLShortener />
         <AdvancedStatistics />
+        <Boost />
       </div>
     );
   }
