@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import heroImage from "./images/illustration-working.svg";
 import "./Hero.css";
 
@@ -14,9 +13,7 @@ class Hero extends React.Component {
           Build your brand's recognition and get detailed
           <br /> insights on how your links are performing.
         </h2>
-        <Link className="get-started-button" to="/sign-up">
-          Get Started
-        </Link>
+        <button className="get-started-button">Get Started</button>
         <div className="hero-image-container">
           <img
             id="hero-image"
