@@ -4,6 +4,7 @@
   margin-top: 220px;
   color: #fff;
   text-align: center;
+  padding-bottom: 55px;
 }
 
 .boost p {
@@ -13,15 +14,23 @@
   padding-top: 50px;
 }
 
-.boost button {
+.boost a {
   background-color: hsl(180, 66%, 49%);
   border: none;
   border-radius: 30px;
   color: #fff;
   font-size: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-bottom: 50px;
 }
 
-.boost button:hover {
+.boost a:hover {
   cursor: pointer;
+}
+
+.boost-button-container {
+  margin-top: 30px;
 }

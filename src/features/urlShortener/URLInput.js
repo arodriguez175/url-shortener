@@ -28,7 +28,7 @@ function URLInput() {
 
   return (
     <div>
-      <div className="input-container">
+      <div className="input-container" id="input">
         <input
           disabled={isLoading}
           ref={urlInput}
