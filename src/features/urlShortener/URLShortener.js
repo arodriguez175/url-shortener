@@ -9,8 +9,8 @@ function URLShortener() {
   return (
     <React.Fragment>
       <URLInput />
-      {shortenedUrls.map((urlObject) => (
-        <URLBlock {...urlObject} />
+      {shortenedUrls.map((urlObject, index) => (
+        <URLBlock key={index} {...urlObject} />
       ))}
     </React.Fragment>
   );

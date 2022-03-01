@@ -23,15 +23,16 @@ h2 {
 .get-started-button {
   text-decoration: none;
   background-color: hsl(180, 66%, 49%);
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 35px;
-  padding-right: 35px;
   border: none;
   border-radius: 30px;
   color: #fff;
   margin-left: 140px;
   font-size: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
 }
 
 .hero-image-container {

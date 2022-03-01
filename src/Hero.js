@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import heroImage from "./images/illustration-working.svg";
 import "./Hero.css";
+import { Link } from "react-scroll";
 
 class Hero extends React.Component {
   render() {
@@ -14,7 +14,13 @@ class Hero extends React.Component {
           Build your brand's recognition and get detailed
           <br /> insights on how your links are performing.
         </h2>
-        <Link className="get-started-button" to="/sign-up">
+        <Link
+          className="get-started-button"
+          activeClass="active"
+          to="input"
+          spy={true}
+          smooth={true}
+        >
           Get Started
         </Link>
         <div className="hero-image-container">

@@ -4,33 +4,31 @@ import { shortenUrl } from "./shortenerSlice";
 import "./URLInput.css";
 
 function URLInput() {
-  const urlInput = useRef(null);
   /* useRef() references an element for later use 
   like the input element. */
+  const urlInput = useRef(null);
 
+  /* Dispatch an action to the redux store */
   const dispatch = useDispatch();
-  /* Dispatch an action to the redux store 
-  by simply adding an action as an argument to the new variable. */
 
-  const isLoading = useSelector((state) => state.shortener.isLoading);
   /* useSelector() is a hook that lets you extract data from 
   the redux store's state. */
+  const isLoading = useSelector((state) => state.shortener.isLoading);
 
+  /* Function for the click event. */
   const handleClick = () => {
-    /* Function for the click event. */
-
+    /* Assigns this variable to the current value of 
+    whatever is in the input field. */
     const urlToShorten = urlInput.current.value;
-    /* Creates a variable assigning it to the current 
-    value of whatever is in the input field. */
 
-    dispatch(shortenUrl(urlToShorten));
     /* Dispatch and runs the shortenUrl function from the 
     shortenerSlice to shorten the url in the input */
+    dispatch(shortenUrl(urlToShorten));
   };
 
   return (
     <div>
-      <div className="input-container">
+      <div className="input-container" id="input">
         <input
           disabled={isLoading}
           ref={urlInput}

@@ -3,11 +3,13 @@
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 1%;
-  border: 1px solid;
+  background-color: #fff;
 }
 
 .urlBlock p {
   margin: 0;
+  margin-left: 4%;
+  margin-right: 4%;
   text-overflow: ellipsis;
 }
 

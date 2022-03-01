@@ -3,7 +3,8 @@
   margin-top: 166px;
   margin-left: 10%;
   margin-right: 10%;
-  background-color: purple;
+  background-color: hsl(257, 27%, 26%);
+  background-image: url("/src/images/bg-shorten-desktop.svg");
   border-radius: 10px;
   padding-top: 25px;
   padding-bottom: 25px;
