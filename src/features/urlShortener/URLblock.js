@@ -6,7 +6,7 @@ class URLblock extends React.Component {
   constructor(props) {
     super(props);
     this.copy = this.copy.bind(this);
-    this.state = { copyButtonLabel: "copy" };
+    this.state = { copyButtonLabel: "Copy" };
   }
 
   copy() {
@@ -14,9 +14,12 @@ class URLblock extends React.Component {
     el.value = this.props.shortenedUrl;
     document.body.appendChild(el);
     el.select();
-    document.execCommand("copy");
+    document.execCommand("Copy");
     document.body.removeChild(el);
     this.setState({ copyButtonLabel: "Copied!" });
+    setTimeout(() => {
+      this.setState({ copyButtonLabel: "Copy" });
+    }, 3000);
   }
 
   render() {
