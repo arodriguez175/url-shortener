@@ -2,22 +2,23 @@ import { configureStore, createStore } from "@reduxjs/toolkit";
 import shortenerReducer from "./features/urlShortener/shortenerSlice";
 import { loadState, saveState } from "./localStorage";
 import throttle from "lodash.throttle";
-import { createStoreHook } from "react-redux";
 import shortenerSlice from "./features/urlShortener/shortenerSlice";
 
-export default configureStore({
+const persistedState = loadState();
+
+const store = configureStore({
   reducer: {
     shortener: shortenerReducer,
   },
+  preloadedState: persistedState,
 });
-
-const persistedState = loadState();
-const store = createStore(shortenerSlice, persistedState);
 
 store.subscribe(
   throttle(() => {
     saveState({
-      shortenedUrls: [],
+      shortenedUrls: store.getState().shortener.shortenedUrls,
     });
   }, 1000)
 );
+
+export default store;

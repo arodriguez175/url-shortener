@@ -20,7 +20,7 @@ export const saveState = (state) => {
     Will only work if the state is serializable. */
     const serializedState = JSON.stringify(state);
     localStorage.setItem("state", serializedState);
-  } catch {
-    // ignore write errors
+  } catch (err) {
+    // ignore write errors.
   }
 };
