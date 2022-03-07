@@ -10,6 +10,14 @@ export const loadState = () => {
     return JSON.parse(serializedState);
   } catch (err) {
     return undefined;
+    /*
+    shortenedUrls: [{...}] */
+
+    /*
+    shortener: {
+      shortenedUrls: [{...}]
+    }
+    */
   }
 };
 

@@ -15,9 +15,7 @@ const store = configureStore({
 
 store.subscribe(
   throttle(() => {
-    saveState({
-      shortenedUrls: store.getState().shortener.shortenedUrls,
-    });
+    saveState(store.getState());
   }, 1000)
 );
 
