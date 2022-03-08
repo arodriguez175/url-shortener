@@ -5,7 +5,7 @@ import "./Features.css";
 class Features extends Component {
   render() {
     return (
-      <div>
+      <div className="features">
         <h2>Features</h2>
         <h3>Replace a url with your brand</h3>
         <p>
