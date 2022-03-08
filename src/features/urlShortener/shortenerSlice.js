@@ -21,6 +21,18 @@ export const shortenerSlice = createSlice({
       console.log(action);
       state.isLoading = action.payload;
     },
+    deleteShortenedUrl: (state, action) => {
+      // do a splice on shortenedUrls to remove 1 item
+      // action.payload.index
+
+      // array = [1, 2, 3]
+      /* const removeItemFromArray = (index) => {
+        array = array.splice(index, 1)
+      }*/
+      const array = state.shortenedUrls;
+      const index = action.payload.index;
+      state.shortenedUrls = array.splice(index, 1);
+    },
   },
 });
 
