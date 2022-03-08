@@ -24,7 +24,6 @@ class URLblock extends React.Component {
 
   delete() {
     // dispatch(deleteShortenedUrl({index: this.props.key}));
-    dispatch();
   }
 
   render() {
@@ -35,7 +34,9 @@ class URLblock extends React.Component {
         <button className="copyButton" onClick={this.copy}>
           {this.state.copyButtonLabel}
         </button>
-        <button onClick={this.delete}>X</button>
+        <button className="deleteButton" onClick={this.delete}>
+          X
+        </button>
       </div>
     );
   }

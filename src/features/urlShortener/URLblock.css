@@ -35,3 +35,14 @@
 .copyButton:hover {
   cursor: pointer;
 }
+
+.deleteButton {
+  background: transparent;
+  color: black;
+  cursor: pointer;
+  width: unset;
+  float: right;
+  margin: 0;
+  position: relative;
+  top: -60px;
+}
