@@ -29,13 +29,13 @@ class URLblock extends React.Component {
   render() {
     return (
       <div className="urlBlock">
+        <button className="deleteButton" onClick={this.delete}>
+          x
+        </button>
         <p className="originalUrl">{this.props.originalUrl}</p>
         <p className="shortenedUrl">{this.props.shortenedUrl}</p>
         <button className="copyButton" onClick={this.copy}>
           {this.state.copyButtonLabel}
-        </button>
-        <button className="deleteButton" onClick={this.delete}>
-          X
         </button>
       </div>
     );
