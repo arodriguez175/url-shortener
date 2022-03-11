@@ -13,9 +13,6 @@ class Features extends Component {
             Set up the perfect custom domain for your brand—all within
             Shortly—in minutes.
           </p>
-          <Link className="features-get-started-button" to="/sign-up">
-            Get Started
-          </Link>
         </div>
 
         <div className="featuresSection">
