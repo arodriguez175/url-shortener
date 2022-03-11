@@ -25,10 +25,10 @@ class Navbar extends React.Component {
           </li>
 
           <li id="login">
-            <Link to="/login">Login</Link>
+            <Link to="#">Login</Link>
           </li>
           <li id="sign-up">
-            <Link to="/sign-up">Sign Up</Link>
+            <Link to="#">Sign Up</Link>
           </li>
         </ul>
       </div>

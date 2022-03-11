@@ -6,8 +6,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Features from "./Features";
 import Pricing from "./Pricing";
 import Resources from "./Resources";
-import Login from "./Login";
-import SignUp from "./SignUp";
 import Layout from "./Layout";
 import store from "./store";
 import { Provider } from "react-redux";
@@ -22,8 +20,6 @@ ReactDOM.render(
             <Route path="features" element={<Features />} />
             <Route path="pricing" element={<Pricing />} />
             <Route path="resources" element={<Resources />} />
-            <Route path="login" element={<Login />} />
-            <Route path="sign-up" element={<SignUp />} />
           </Route>
         </Routes>
       </BrowserRouter>
