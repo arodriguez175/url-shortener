@@ -18,8 +18,8 @@ class Features extends Component {
         <div className="featuresSection">
           <h3>Get more clicks</h3>
           <p>
-            Custom domains replace the “bit.ly” in your links with the name of
-            your choosing so you can take total control of your content. By
+            Custom domains replace the “shrtco.de” in your links with the name
+            of your choosing so you can take total control of your content. By
             using your brand in your links, your audience will know they can
             trust them.
           </p>
