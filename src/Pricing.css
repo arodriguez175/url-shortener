@@ -60,3 +60,7 @@
   font-weight: bold;
   font-size: 25px;
 }
+
+.includes li {
+  padding-top: 0;
+}
