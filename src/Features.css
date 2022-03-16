@@ -10,3 +10,25 @@
   color: #fff;
   font-size: 18px;
 }
+
+.features h2 {
+  margin-left: unset;
+  margin-right: unset;
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+}
+
+.features {
+  margin-left: 140px;
+  margin-right: 140px;
+}
+
+.featuresSection {
+  margin-bottom: 50px;
+}
+
+.features p {
+  color: #b2b1b3;
+}

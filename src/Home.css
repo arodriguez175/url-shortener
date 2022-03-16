@@ -1,3 +1,7 @@
-body {
-  background: linear-gradient(180deg, #fff 720px, hsl(180, 11%, 93%) 720px);
+.home {
+  background: linear-gradient(
+    180deg,
+    transparent 530px,
+    hsl(180, 11%, 93%) 530px
+  );
 }

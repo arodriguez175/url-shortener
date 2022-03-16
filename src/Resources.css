@@ -1,0 +1,25 @@
+.resources h2 {
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-left: 140px;
+  margin-right: 140px;
+  grid-gap: 30px 30px;
+}
+
+.item {
+  text-align: center;
+  border: thin #e6e6e6 solid;
+  cursor: pointer;
+}
+
+.grid :hover {
+  background-color: hsl(180, 66%, 49%);
+  color: #fff;
+}
