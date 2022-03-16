@@ -63,6 +63,6 @@ export function shortenUrl(originalUrl) {
   };
 }
 
-export const { saveShortenedUrl, setLoading } = shortenerSlice.actions;
+export const { saveShortenedUrl, setLoading, deleteShortenedUrl } = shortenerSlice.actions;
 
 export default shortenerSlice.reducer;

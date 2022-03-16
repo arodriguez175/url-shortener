@@ -1,11 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { deleteShortenedUrl } from "./shortenerSlice";
 import "./URLblock.css";
 
 class URLblock extends React.Component {
   constructor(props) {
     super(props);
     this.copy = this.copy.bind(this);
+    this.delete = this.delete.bind(this);
     this.state = { copyButtonLabel: "Copy" };
   }
 
@@ -23,7 +26,7 @@ class URLblock extends React.Component {
   }
 
   delete() {
-    // dispatch(deleteShortenedUrl({index: this.props.key}));
+    this.props.deleteShortenedUrl(this.props.index)
   }
 
   render() {
@@ -47,4 +50,14 @@ URLblock.propTypes = {
   shortenedUrl: PropTypes.string,
 };
 
-export default URLblock;
+// mapDispatchToProps is used to pass dispatching particular actions
+// into the component as props. In case of URLblock, we want to be able to
+// send a deleteShortenedUrl action to the store.
+// Docs: https://react-redux.js.org/using-react-redux/connect-mapdispatch
+const mapDispatchToProps = dispatch => {
+  return {
+    deleteShortenedUrl: index => dispatch(deleteShortenedUrl(index))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(URLblock);
