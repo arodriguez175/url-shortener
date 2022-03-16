@@ -43,4 +43,5 @@ h2 {
   position: absolute;
   right: 0;
   top: 137px;
+  z-index: -1;
 }

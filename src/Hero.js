@@ -7,6 +7,13 @@ class Hero extends React.Component {
   render() {
     return (
       <div>
+        <div className="hero-image-container">
+          <img
+            id="hero-image"
+            src={heroImage}
+            alt="Illustration of person sitting in front of desk"
+          />
+        </div>
         <h1>
           More than just <br /> shorter links
         </h1>
@@ -23,13 +30,6 @@ class Hero extends React.Component {
         >
           Get Started
         </Link>
-        <div className="hero-image-container">
-          <img
-            id="hero-image"
-            src={heroImage}
-            alt="Illustration of person sitting in front of desk"
-          />
-        </div>
       </div>
     );
   }
