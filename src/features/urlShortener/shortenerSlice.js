@@ -29,9 +29,10 @@ export const shortenerSlice = createSlice({
       /* const removeItemFromArray = (index) => {
         array = array.splice(index, 1)
       }*/
-      const array = state.shortenedUrls;
-      const index = action.payload.index;
-      state.shortenedUrls = array.splice(index, 1);
+      const array = [...state.shortenedUrls];
+      const index = action.payload;
+      array.splice(index, 1);
+      state.shortenedUrls = array;
     },
   },
 });
