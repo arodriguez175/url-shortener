@@ -45,3 +45,12 @@
   position: absolute;
   right: 140px;
 }
+
+.x {
+  width: 10px;
+  background-color: transparent;
+  border-radius: 50%;
+  position: relative;
+  bottom: 20px;
+  left: 15px;
+}
