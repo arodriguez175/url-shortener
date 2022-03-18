@@ -23,13 +23,6 @@ class Navbar extends React.Component {
           <li>
             <Link to="/resources">Resources</Link>
           </li>
-
-          <li id="login">
-            <Link to="#">Login</Link>
-          </li>
-          <li id="sign-up">
-            <Link to="#">Sign Up</Link>
-          </li>
         </ul>
       </div>
     );
