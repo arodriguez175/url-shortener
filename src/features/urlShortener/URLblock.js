@@ -13,12 +13,18 @@ class URLblock extends React.Component {
   }
 
   copy() {
-    const el = document.createElement("input");
-    el.value = this.props.shortenedUrl;
-    document.body.appendChild(el);
-    el.select();
-    document.execCommand("Copy");
-    document.body.removeChild(el);
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(this.props.shortenedUrl).catch((error) => {
+        console.error(error);
+      });
+    } else {
+      const el = document.createElement("input");
+      el.value = this.props.shortenedUrl;
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand("Copy");
+      document.body.removeChild(el);
+    }
     this.setState({ copyButtonLabel: "Copied!" });
     setTimeout(() => {
       this.setState({ copyButtonLabel: "Copy" });
