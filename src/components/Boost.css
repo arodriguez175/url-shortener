@@ -1,0 +1,36 @@
+.boost {
+  background-image: url("../images/bg-boost-desktop.svg");
+  background-color: hsl(257, 27%, 26%);
+  margin-top: 220px;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 55px;
+}
+
+.boost p {
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  padding-top: 50px;
+}
+
+.boost a {
+  background-color: hsl(180, 66%, 49%);
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 50px;
+}
+
+.boost a:hover {
+  cursor: pointer;
+}
+
+.boost-button-container {
+  margin-top: 30px;
+}

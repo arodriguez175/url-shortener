@@ -1,0 +1,47 @@
+h1,
+h2 {
+  margin-left: 140px;
+  margin-right: 140px;
+}
+
+h1 {
+  color: #363636;
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 79px;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 40px;
+  color: #b2b1b3;
+  font-weight: lighter;
+  font-size: 20px;
+}
+
+.get-started-button {
+  text-decoration: none;
+  background-color: hsl(180, 66%, 49%);
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  margin-left: 140px;
+  font-size: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.hero-image-container {
+  overflow: hidden;
+}
+
+#hero-image {
+  position: absolute;
+  right: 0;
+  top: 137px;
+  z-index: -1;
+}
