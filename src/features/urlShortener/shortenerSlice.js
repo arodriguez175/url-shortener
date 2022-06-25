@@ -18,7 +18,6 @@ export const shortenerSlice = createSlice({
       state.shortenedUrls = [...state.shortenedUrls, action.payload];
     },
     setLoading: (state, action) => {
-      console.log(action);
       state.isLoading = action.payload;
     },
     deleteShortenedUrl: (state, action) => {
