@@ -8,6 +8,7 @@ class Resources extends Component {
         <a
           href="https://github.com/arodriguez175/url-shortener"
           target="_blank"
+          rel="noreferrer"
         >
           <svg
             className="github"

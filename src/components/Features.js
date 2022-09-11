@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import "./Features.css";
 
 class Features extends Component {
@@ -9,6 +8,7 @@ class Features extends Component {
         <a
           href="https://github.com/arodriguez175/url-shortener"
           target="_blank"
+          rel="noreferrer"
         >
           <svg
             className="github"
