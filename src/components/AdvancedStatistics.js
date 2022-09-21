@@ -4,7 +4,7 @@ import "./AdvancedStatistics.css";
 class AdvancedStatistics extends React.Component {
   render() {
     return (
-      <div>
+      <div className="advanced-statistics">
         <p className="advancedStatisticsTitle">Advanced Statistics</p>
         <p className="advancedStatisticsSubTitle">
           Track how your links are performing accross the web with <br />

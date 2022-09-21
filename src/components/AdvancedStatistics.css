@@ -64,3 +64,26 @@ hr {
   bottom: -256px;
   width: 50%;
 }
+
+@media only screen and (max-width: 768px) {
+  .advanced-statistics {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  hr {
+    display: none;
+  }
+
+  .advancedStatisticsBlock {
+    margin-left: 125px;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .advancedStatisticsBlock {
+    margin-left: 14px;
+    position: unset;
+    right: unset;
+  }
+}

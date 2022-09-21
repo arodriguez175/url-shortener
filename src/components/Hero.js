@@ -21,15 +21,17 @@ class Hero extends React.Component {
           Build your brand's recognition and get detailed
           <br /> insights on how your links are performing.
         </h2>
-        <Link
-          className="get-started-button"
-          activeClass="active"
-          to="input"
-          spy={true}
-          smooth={true}
-        >
-          Get Started
-        </Link>
+        <div className="get-started-button-container">
+          <Link
+            className="get-started-button"
+            activeClass="active"
+            to="input"
+            spy={true}
+            smooth={true}
+          >
+            Get Started
+          </Link>
+        </div>
       </div>
     );
   }
