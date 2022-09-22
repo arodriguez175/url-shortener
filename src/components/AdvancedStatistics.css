@@ -25,7 +25,7 @@
   right: -84px;
 }
 
-svg {
+.advancedStatisticsBlock svg {
   background-color: hsl(257, 27%, 26%);
   padding: 20px;
   border-radius: 50%;
@@ -82,8 +82,10 @@ hr {
 
 @media only screen and (max-width: 390px) {
   .advancedStatisticsBlock {
-    margin-left: 14px;
+    margin: auto;
+    margin-top: 60px;
     position: unset;
     right: unset;
+    width: 240px;
   }
 }

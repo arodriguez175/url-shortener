@@ -34,7 +34,11 @@ function URLInput() {
           ref={urlInput}
           placeholder="Shorten a link here..."
         ></input>
-        <button disabled={isLoading} onClick={handleClick}>
+        <button
+          className="input-button"
+          disabled={isLoading}
+          onClick={handleClick}
+        >
           {isLoading ? "Loading..." : "Shorten It!"}
         </button>
       </div>

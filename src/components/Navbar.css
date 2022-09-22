@@ -1,14 +1,14 @@
-.navbar {
+.topnav {
   margin-top: 40px;
   margin-bottom: 120px;
 }
 
-.navbar li {
+.topnav li {
   display: inline;
   margin: 15px;
 }
 
-.navbar a {
+.topnav a {
   text-decoration: none;
   color: #989799;
 }
@@ -34,4 +34,33 @@
   padding-right: 20px;
   border-radius: 30px;
   color: #fff;
+}
+
+.icon {
+  border: none;
+  background-color: transparent;
+}
+
+@media only screen and (max-width: 768px) {
+  /*  */
+}
+
+@media only screen and (max-width: 390px) {
+  .topnav {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .topnav li {
+    display: unset;
+    margin: 0;
+  }
+
+  #logo {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #logo img {
+    position: unset;
+  }
 }

@@ -22,7 +22,7 @@ input {
   font-family: "Poppins", sans-serif;
 }
 
-button {
+.input-button {
   width: 160px;
   margin: 25px;
   padding: 15px;
@@ -36,4 +36,14 @@ button {
 
 .input-container button:hover {
   cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .input-container {
+    margin-top: 60px;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  /*  */
 }

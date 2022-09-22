@@ -2,13 +2,15 @@ import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 class Navbar extends React.Component {
   render() {
     return (
       <div>
-        <ul className="navbar">
-          <li id="logo">
+        <ul className="topnav" id="myTopnav">
+          <li id="logo" className="active">
             <Link to="/">
               <img src={logo} alt="Shortly logo" />
             </Link>
@@ -22,6 +24,11 @@ class Navbar extends React.Component {
           </li>
           <li>
             <Link to="/resources">Resources</Link>
+          </li>
+          <li>
+            <button className="icon">
+              <FontAwesomeIcon icon={faBars} />
+            </button>
           </li>
         </ul>
       </div>
