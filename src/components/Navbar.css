@@ -1,16 +1,22 @@
 .topnav {
   margin-top: 40px;
   margin-bottom: 120px;
+  overflow: hidden;
 }
 
-.topnav li {
-  display: inline;
-  margin: 15px;
-}
-
-.topnav a {
-  text-decoration: none;
+.topnav a,
+.topnav button {
+  float: left;
+  display: block;
   color: #989799;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.topnav .icon {
+  display: none;
 }
 
 #logo {
@@ -51,10 +57,6 @@
     margin-top: 0;
     margin-bottom: 0;
   }
-  .topnav li {
-    display: unset;
-    margin: 0;
-  }
 
   #logo {
     margin-left: 0;
@@ -63,5 +65,29 @@
 
   #logo img {
     position: unset;
+  }
+
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+
+  .topnav button.icon {
+    float: right;
+    display: block;
+  }
+
+  .topnav.responsive {
+    position: relative;
+  }
+
+  .topnav.responsive button.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
   }
 }

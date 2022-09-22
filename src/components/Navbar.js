@@ -8,29 +8,30 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 class Navbar extends React.Component {
   render() {
     return (
-      <div>
-        <ul className="topnav" id="myTopnav">
-          <li id="logo" className="active">
-            <Link to="/">
-              <img src={logo} alt="Shortly logo" />
-            </Link>
-          </li>
+      <div className="topnav" id="myTopnav">
+        <Link to="/" id="logo">
+          <img src={logo} alt="Shortly logo" />
+        </Link>
 
-          <li>
-            <Link to="/features">Features</Link>
-          </li>
-          <li>
-            <Link to="/pricing">Pricing</Link>
-          </li>
-          <li>
-            <Link to="/resources">Resources</Link>
-          </li>
-          <li>
-            <button className="icon">
-              <FontAwesomeIcon icon={faBars} />
-            </button>
-          </li>
-        </ul>
+        <Link to="/features">Features</Link>
+
+        <Link to="/pricing">Pricing</Link>
+
+        <Link to="/resources">Resources</Link>
+
+        <button
+          className="icon"
+          onClick={() => {
+            let navbarVar = document.getElementById("myTopnav");
+            if (navbarVar.className === "topnav") {
+              navbarVar.className += " responsive";
+            } else {
+              navbarVar.className = "topnav";
+            }
+          }}
+        >
+          <FontAwesomeIcon icon={faBars} />
+        </button>
       </div>
     );
   }
