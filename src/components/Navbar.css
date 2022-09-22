@@ -39,6 +39,7 @@
 .icon {
   border: none;
   background-color: transparent;
+  color: #363636;
 }
 
 @media only screen and (max-width: 768px) {
