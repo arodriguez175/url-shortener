@@ -4,14 +4,3 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 0;
 }
-
-.github {
-  background-color: unset;
-  width: 30px;
-  position: absolute;
-  top: 0;
-  left: unset;
-  right: 0;
-  margin-right: 100px;
-  margin-top: 10px;
-}

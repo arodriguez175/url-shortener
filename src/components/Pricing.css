@@ -64,3 +64,11 @@
 .includes li {
   padding-top: 0;
 }
+
+@media only screen and (max-width: 768px) {
+  .pricing {
+    margin-left: 39px;
+    margin-right: 39px;
+    display: grid;
+  }
+}

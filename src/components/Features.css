@@ -32,3 +32,10 @@
 .features p {
   color: #b2b1b3;
 }
+
+@media only screen and (max-width: 390px) {
+  .features {
+    margin-left: 39px;
+    margin-right: 39px;
+  }
+}

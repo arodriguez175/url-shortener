@@ -23,3 +23,19 @@
   background-color: hsl(180, 66%, 49%);
   color: #fff;
 }
+
+@media only screen and (max-width: 768px) {
+  .item {
+    font-size: 10pt;
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    margin-left: 39px;
+    margin-right: 39px;
+    font-size: unset;
+  }
+}
