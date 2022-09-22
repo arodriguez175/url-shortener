@@ -13,10 +13,7 @@ class Layout extends React.Component {
           target="_blank"
           rel="noreferrer"
         >
-          <FontAwesomeIcon
-            icon={faGithub}
-            className="text-[25px] text-primary"
-          />
+          <FontAwesomeIcon icon={faGithub} className="github" />
         </a>
         <Navbar />
         <Outlet />
