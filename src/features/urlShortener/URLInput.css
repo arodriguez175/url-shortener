@@ -20,6 +20,7 @@ input {
   border: 0;
   font-size: 18px;
   font-family: "Poppins", sans-serif;
+  text-overflow: ellipsis;
 }
 
 .input-button {
@@ -45,7 +46,7 @@ input {
 }
 
 @media only screen and (max-width: 390px) {
-  .input-container input {
+  input {
     font-size: 14px;
   }
 }
