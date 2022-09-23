@@ -4,6 +4,7 @@
   margin-right: 10%;
   margin-top: 1%;
   background-color: #fff;
+  position: relative;
 }
 
 .urlBlock p {
@@ -38,19 +39,24 @@
 
 .deleteButton {
   background: transparent;
+  border: none;
   color: black;
   cursor: pointer;
   width: unset;
-  margin: 0;
   position: absolute;
-  right: 140px;
+  right: 0;
+  top: 0;
 }
 
 .x {
   width: 10px;
   background-color: transparent;
   border-radius: 50%;
-  position: relative;
-  bottom: 20px;
-  left: 15px;
+  padding: 3px;
+}
+
+@media only screen and (max-width: 390px) {
+  .urlBlock p {
+    padding-top: 15px;
+  }
 }
