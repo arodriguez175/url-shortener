@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import Footer from "./Footer";
 
 class Layout extends React.Component {
   render() {
@@ -17,6 +18,7 @@ class Layout extends React.Component {
         </a>
         <Navbar />
         <Outlet />
+        <Footer />
       </div>
     );
   }
