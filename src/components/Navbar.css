@@ -83,6 +83,11 @@
     position: relative;
   }
 
+  .topnav.responsive a:not(:first-child) {
+    background-color: hsl(257, 27%, 26%);
+    color: #fff;
+  }
+
   .topnav.responsive button.icon {
     position: absolute;
     right: 0;
