@@ -62,10 +62,7 @@ URLblock.propTypes = {
   shortenedUrl: PropTypes.string,
 };
 
-// mapDispatchToProps is used to pass dispatching particular actions
-// into the component as props. In case of URLblock, we want to be able to
-// send a deleteShortenedUrl action to the store.
-// Docs: https://react-redux.js.org/using-react-redux/connect-mapdispatch
+
 const mapDispatchToProps = (dispatch) => {
   return {
     deleteShortenedUrl: (index) => dispatch(deleteShortenedUrl(index)),
