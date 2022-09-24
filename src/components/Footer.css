@@ -50,6 +50,7 @@
   .footer {
     grid-template-columns: repeat(1, minmax(0, 1fr));
     padding-bottom: 0;
+    text-align: center;
   }
 
   .social-media-icons {
