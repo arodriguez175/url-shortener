@@ -50,4 +50,8 @@ input {
   input {
     font-size: 14px;
   }
+
+  .input-button {
+    width: 83%;
+  }
 }
