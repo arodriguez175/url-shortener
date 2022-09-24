@@ -89,4 +89,14 @@ hr {
     right: unset;
     width: 240px;
   }
+
+  .advancedStatisticsTitle {
+    font-size: 28px;
+  }
+
+  .advancedStatisticsSubTitle {
+    font-size: 15px;
+    margin-left: 37px;
+    margin-right: 37px;
+  }
 }
