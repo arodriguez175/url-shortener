@@ -17,7 +17,7 @@
 
 .topnav .icon {
   display: none;
-  font-size: 16pt;
+  font-size: 20pt;
 }
 
 #logo {
@@ -68,7 +68,6 @@
 
   #logo img {
     position: unset;
-    width: 90px;
   }
 
   .topnav a:not(:first-child) {
