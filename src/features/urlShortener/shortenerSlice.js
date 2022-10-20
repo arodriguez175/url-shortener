@@ -1,8 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-/* A "slice" is a collection of Redux reducer logic and actions
-  for a single feature in the app */
+/* My Redux slice storing reducer logic and actions for the shorten feature */
 export const shortenerSlice = createSlice({
   // The beginning state of the shortener slice
   name: "shortener",
@@ -11,25 +10,26 @@ export const shortenerSlice = createSlice({
     isLoading: false,
   },
 
-  /* A reducer takes the state and action of the application 
+  /* Each reducer takes the state and action of the application 
   and returns the new state. */
   reducers: {
     saveShortenedUrl: (state, action) => {
+      /* Spreading elements from shortenedUrls state into action.payload */
+      /* Payload is the property that holds the actual data in a Redux action object */
+      /* state.shortenedUrls will be assigned an array of the spread shortenedUrls
+      and payload */
       state.shortenedUrls = [...state.shortenedUrls, action.payload];
     },
     setLoading: (state, action) => {
       state.isLoading = action.payload;
     },
     deleteShortenedUrl: (state, action) => {
-      // do a splice on shortenedUrls to remove 1 item
+      // do a splice on shortenedUrls to remove 1 item (Url)
       // action.payload.index
 
-      // array = [1, 2, 3]
-      /* const removeItemFromArray = (index) => {
-        array = array.splice(index, 1)
-      }*/
       const array = [...state.shortenedUrls];
       const index = action.payload;
+      // Remove 1 element (Url) from the array
       array.splice(index, 1);
       state.shortenedUrls = array;
     },
@@ -37,7 +37,7 @@ export const shortenerSlice = createSlice({
 });
 
 export function shortenUrl(originalUrl) {
-  // async makes a function return a Promise.
+  // async makes my function return a Promise.
   return async (dispatch) => {
     /* assigning url as the shrtco API base url 
     and assigning that to my original url. */

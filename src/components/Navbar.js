@@ -22,6 +22,7 @@ class Navbar extends React.Component {
         <button
           className="icon"
           onClick={() => {
+            /* Resposive navigation */
             let navbarVar = document.getElementById("myTopnav");
             if (navbarVar.className === "topnav") {
               navbarVar.className += " responsive";

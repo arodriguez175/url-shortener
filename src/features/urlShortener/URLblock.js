@@ -12,6 +12,7 @@ class URLblock extends React.Component {
     this.state = { copyButtonLabel: "Copy" };
   }
 
+  // Copies Url to clipboard using the clipboard API, navigator.clipboard
   copy() {
     if (navigator.clipboard) {
       navigator.clipboard.writeText(this.props.shortenedUrl).catch((error) => {

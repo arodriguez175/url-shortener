@@ -25,7 +25,7 @@ class Hero extends React.Component {
           <Link
             className="get-started-button"
             activeClass="active"
-            to="input"
+            to="input" // Auto scroll to input
             spy={true}
             smooth={true}
           >

@@ -17,6 +17,7 @@ class Layout extends React.Component {
           <FontAwesomeIcon icon={faGithub} className="github" />
         </a>
         <Navbar />
+        {/* Outlet is used for parent routes to render their child route elements. */}
         <Outlet />
         <Footer />
       </div>

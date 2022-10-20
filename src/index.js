@@ -15,7 +15,15 @@ ReactDOM.render(
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
+          {/* Components nested in this parent route will be 
+          displayed by the Layout component. Anything in the
+          Layout component will also be rendered in all other pages,
+          like the header or footer. */}
           <Route path="/" element={<Layout />}>
+            {/* If there's nothing else inside the url, then
+            this route index element will just show the Home component
+            within the Layout component. For example, just display the
+            home page if the url is just wwww.blah.com/ */}
             <Route index element={<Home />} />
             <Route path="features" element={<Features />} />
             <Route path="pricing" element={<Pricing />} />
