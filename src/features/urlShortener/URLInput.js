@@ -4,25 +4,23 @@ import { shortenUrl } from "./shortenerSlice";
 import "./URLInput.css";
 
 function URLInput() {
-  /* useRef() references an element for later use 
-  like the input element. */
+  /* The variable urlInput will reference the url input field */
   const urlInput = useRef(null);
 
   /* Dispatch an action to the redux store */
   const dispatch = useDispatch();
 
-  /* useSelector() is a hook that lets you extract data from 
-  the redux store's state. */
+  /* Gets the isLoading property from the shortener slice's state */
   const isLoading = useSelector((state) => state.shortener.isLoading);
 
-  /* Function for the click event. */
+  /* Runs the function to shorten a url entered in the input field 
+  after clicking the button */
   const handleClick = () => {
-    /* Assigns this variable to the current value of 
-    whatever is in the input field. */
+    /* Store whatever is in the input field in this variable */
     const urlToShorten = urlInput.current.value;
 
-    /* Dispatch and runs the shortenUrl function from the 
-    shortenerSlice to shorten the url in the input */
+    /* Dispatches the shortenedUrl function from the shortener slice 
+    to shorten the current url in the input field */
     dispatch(shortenUrl(urlToShorten));
   };
 
@@ -39,6 +37,10 @@ function URLInput() {
           disabled={isLoading}
           onClick={handleClick}
         >
+          {/* If isLoading property from state is true make this button say 
+          "Loading...", if false then make it say "Shorten It!" */}
+          {/* This is to make the user know that the process is loading 
+          while waiting the url to shorten */}
           {isLoading ? "Loading..." : "Shorten It!"}
         </button>
       </div>
