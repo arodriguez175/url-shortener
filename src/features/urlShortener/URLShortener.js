@@ -4,8 +4,10 @@ import URLInput from "./URLInput";
 import URLBlock from "./URLblock";
 
 function URLShortener() {
+  // Store my shortenedUrls state to in variable
   const shortenedUrls = useSelector((state) => state.shortener.shortenedUrls);
 
+  // Renders a URLBlock component for each item in the shortened urls array
   return (
     <React.Fragment>
       <URLInput />

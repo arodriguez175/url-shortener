@@ -4,22 +4,20 @@ import { shortenUrl } from "./shortenerSlice";
 import "./URLInput.css";
 
 function URLInput() {
-  /* The variable urlInput will reference the url input field */
+  /* Will be used to reference the url input field */
   const urlInput = useRef(null);
 
-  /* Dispatch an action to the redux store */
+  /* To dispatch an action to the redux store */
   const dispatch = useDispatch();
 
   /* Gets the isLoading property from the shortener slice's state */
   const isLoading = useSelector((state) => state.shortener.isLoading);
 
-  /* Runs the function to shorten a url entered in the input field 
-  after clicking the button */
   const handleClick = () => {
-    /* Store whatever is in the input field in this variable */
+    /* Stores the url entered in the input field in this variable */
     const urlToShorten = urlInput.current.value;
 
-    /* Dispatches the shortenedUrl function from the shortener slice 
+    /* Dispatches the shortenedUrl action from the shortener slice 
     to shorten the current url in the input field */
     dispatch(shortenUrl(urlToShorten));
   };

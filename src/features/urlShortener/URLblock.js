@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 import { deleteShortenedUrl } from "./shortenerSlice";
 import "./URLblock.css";
 
+/* This component is for making the shortened urls to be in the form of block like 
+containers and allows you to delete these blocks as well as copying to the clipboard */
 class URLblock extends React.Component {
   constructor(props) {
     super(props);
@@ -12,7 +14,7 @@ class URLblock extends React.Component {
     this.state = { copyButtonLabel: "Copy" };
   }
 
-  // Copies Url to clipboard using the clipboard API, navigator.clipboard
+  // Copies Url to clipboard using the clipboard API
   copy() {
     if (navigator.clipboard) {
       navigator.clipboard.writeText(this.props.shortenedUrl).catch((error) => {
@@ -63,10 +65,9 @@ URLblock.propTypes = {
   shortenedUrl: PropTypes.string,
 };
 
-// mapDispatchToProps is used to pass dispatching particular actions
-// into the component as props. In case of URLblock, we want to be able to
-// send a deleteShortenedUrl action to the store.
-// Docs: https://react-redux.js.org/using-react-redux/connect-mapdispatch
+// Sends the deleteShortenedUrl action to the store
+/* mapDispatchToProps is used to pass dispatching particular actions into the 
+component as props. */
 const mapDispatchToProps = (dispatch) => {
   return {
     deleteShortenedUrl: (index) => dispatch(deleteShortenedUrl(index)),

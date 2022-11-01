@@ -1,32 +1,27 @@
-/* loadState will look at the browser’s localStorage. 
-If there is a serialized string of the state, 
-it will parse it as JSON. */
+// Loads the state from localStorage
 export const loadState = () => {
   try {
+    // Gets the state from the browser's local storage
     const serializedState = localStorage.getItem("state");
     if (serializedState === null) {
       return undefined;
     }
+    // If there is a serialized string of the state, returns it as an object
     return JSON.parse(serializedState);
   } catch (err) {
     return undefined;
-    /*
-    shortenedUrls: [{...}] */
-
-    /*
-    shortener: {
-      shortenedUrls: [{...}]
-    }
-    */
   }
 };
 
+// Saves the state to localStorage
 export const saveState = (state) => {
   try {
-    /* The state is serialized into a string by using
-    JSON.stringify.
-    Will only work if the state is serializable. */
+    /* Takes the state and turns it into a JSON string so it can 
+    be saved in localStorage */
     const serializedState = JSON.stringify(state);
+
+    /* Saves that state into localStorage and 
+    if an error happens, catch that error and ignore it */
     localStorage.setItem("state", serializedState);
   } catch (err) {
     // ignore write errors.
